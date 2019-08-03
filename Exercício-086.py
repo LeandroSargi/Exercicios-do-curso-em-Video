@@ -3,3 +3,7 @@ com valores lidos pelo teclado.
 No final, mostre a matriz na tela, com a formatação correta.'''
 
 lista =  []
+dados = []
+linha1 = []
+linha2 = []
+linha3 = []
