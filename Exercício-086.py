@@ -4,34 +4,25 @@ No final, mostre a matriz na tela, com a formatação correta.'''
 
 lista =  []
 dados = []
-linha = []
+numeros = []
 
 
 for c in range(0,3):
     dados.append(int(input('Digite um valor para a linha 1:  ')))
-    linha.append(dados[:])
-    dados.clear()
-    
-lista.append(linha[:])
-linha.clear()
+lista.append(dados[:])
+dados.clear()
 
 for c in range(0,3):
     dados.append(int(input('Digite um valor para a linha 2:  ')))
-    linha.append(dados[:])
-    dados.clear()
-    
-lista.append(linha[:])
-linha.clear()
+lista.append(dados[:])
+dados.clear()
 
 for c in range(0,3):
     dados.append(int(input('Digite um valor para a linha 3:  ')))
-    linha.append(dados[:])
-    dados.clear()
+lista.append(dados[:])
+dados.clear()
 
-lista.append(linha[:])
-linha.clear()
-
-for n in lista:
-    for item in n:
-        print(item, end = '')
+for item in lista:
+    for n in item:
+        print(f'{[ n ]}', end = '')
     print('\n', end = '')
