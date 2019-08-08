@@ -6,9 +6,10 @@ que o usuário possa mostrar as notas cada aluno individualmente.'''
 dados = list()
 lista = list()
 resposta = ''
+opção = 0
 
 while True:
-    dados.append(str(input('Digite o nome:  ')))
+    dados.append(str(input('Digite o nome:  ')).capitalize())
     dados.append(float(input('Digite a primeira nota:  ')))
     dados.append(float(input('Digite a segunda nota:  ')))
     resposta = str(input('Deseja continuar? [S/N] ')).strip() .upper() [0]
@@ -17,13 +18,16 @@ while True:
     if resposta in 'N':
         break
 
-#for c in range(0, (len(lista)+1)):
-#    for d in lista[c]:
-#        print(d[d])
-#    print(lista[c])
+for c in lista:
+    print(f'{lista.index(c)} - Nome:  {lista[lista.index(c)][0]} -------------- Média:  {((lista[lista.index(c)][1] + lista[lista.index(c)][2])/2)}')
 
+while opção != 999:
+    opção = int(input('Digite o número do aluno do qual deseja saber as notas [999 para parar]:  '))
+    if opção == 999:
+        print('Finalizando.....')
+        break
+    for c, item in enumerate(lista):
+        if opção == c:
+            print(f'Aluno {lista[opção][0]} >>>>>>>>> Nota 1: {lista[opção][1]} >>>>>>>> Nota 2: {lista[opção][2]}')
+            break
 
-
-#    for d in lista:
-#        print(f'Nome:  {lista[0][0]}')
-#        print(f'Média: {lista[0][1]/lista[0][2]} ')
