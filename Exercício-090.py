@@ -2,7 +2,6 @@
 # a situação em um dicionário. No final, mostre o conteúdo da estrutura na
 # tela.
 
-lista = list()
 cadastro = dict()
 
 cadastro['Nome'] = str(input('Digite o nome do Aluno:  ')).capitalize()
@@ -11,7 +10,6 @@ if cadastro['Média'] < 7:
     cadastro['Situação'] = 'Reprovado'
 else:
     cadastro['Situação'] = 'Aprovado'
-lista.append(cadastro.copy())
 
 for k, v in cadastro.items():
     print(f'{k} é {v}')
