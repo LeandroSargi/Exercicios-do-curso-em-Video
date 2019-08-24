@@ -5,4 +5,3 @@ Por este motivo, estarei enviando e trabalhando com meus arquivos utilizando est
 ferramenta, como uma maneira bem prática de aprender.
 
 Aqui dia 03/08/2019 se inicia a resolução dos exercícios pertinentes ao meu curso.
-Já estou na fase 18, trabalhando com listas, o exercício é o número 86.
