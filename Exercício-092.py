@@ -5,17 +5,28 @@
 # vai se aposentar.
 
 from datetime import date
+from time import sleep
 ano = date.today().year
 from operator import itemgetter
 
+print('-='*20)
+print('{:^40}'.format('PROGRAMA DE CADASTRO DE PESSOAS'))
+print('-='*20)
 
-cadastro = {'Nome': str(input('Digite o nome:  ')),
-'Idade': ano - int(input('Digite o ano de nascimento:  ')),
-'Carteira': int(input('Digite o número de sua Carteira de Trabalho:  '))}
+cadastro = {'Nome': str(input('Digite o nome:  ')).capitalize()}
+nascimento = int(input('Digite o ano de nascimento:  '))
+cadastro['Idade'] = ano - nascimento
+cadastro['CTPS'] = int(input('Digite o n° da Carteira de Trabalho:  '))
 
-if cadastro['Carteira'] != 0:
-    cadastro['Contrato'] = int(input('Digite o ano de contratação:  '))
-    cadastro['Salário'] = float(input('{:.2f}'.format('Digite o salário:  ')))
+if cadastro['CTPS'] != 0:
+    cadastro['1° Contratação'] = int(input('Digite o ano de contratação:  '))
+    cadastro['Salário'] = float(input('{}'.format('Digite o salário:  ')))
+    contagem = cadastro['1° Contratação'] + 35
+    cadastro['Aposentadoria'] = contagem - nascimento
 
-# para se aposentar é 35 anos de contribuição
-print(cadastro)
+print('-='*20)
+print('{:^40}'.format('Mostrando Resultados'))
+print('-='*20)
+
+for k, v in cadastro.items():
+        print(f'{k} >> {v}.')
