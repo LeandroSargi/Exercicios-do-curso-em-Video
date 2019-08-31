@@ -5,7 +5,8 @@
 def área(x,y):
     área = x*y
     print(f'A área do terreno é {área:.2f}m²')
+    
 
-x = float(input('Digite a largura do terreno em m²:  '))
-y = float(input('Digite o comprimento do terreno em m²:  '))
+x = float(input('Digite a largura do terreno em (m):  '))
+y = float(input('Digite o comprimento do terreno em (m):  '))
 área(x, y)

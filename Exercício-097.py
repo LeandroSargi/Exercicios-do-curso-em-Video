@@ -8,9 +8,13 @@
 
 
 def escreva(texto):
-    print('#'*30)
-    print('{:^30}'.format(texto))
-    print('#'*30)
+    tam = len(texto) + 4
+    print('#'*tam)
+    print(f'  {texto}')
+    print('#'*tam)
 
-texto = str(input('Digite algo aqui:  '))
-escreva(texto)
+
+#Programa Principal
+escreva('Leandro Antunes Sargi')
+escreva('Olá Mundo!!')
+escreva('oi')

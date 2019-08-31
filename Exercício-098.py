@@ -6,33 +6,39 @@
 # c) Uma contagem personalizada.
 from time import sleep
 
-def contador():
-    if opção == 1:
-        for c in range(1,11):
-            print(c)
-            sleep(.8)
-    if opção == 2:
-        for c in range(10, -1, -2):
-            print(c)
-            sleep(.8)
-    if opção == 3:
-        início = int(input('Digite o número de início da contagem:  '))
-        fim = int(input('Digite o número de término da contagem:  '))
-        passo = int(input('Digite o passo da contagem:  '))
-        if passo == 0:
-            passo = 1
-        if início > fim:
-            passo = passo - (passo*2)
+def contador(i, f, p):
+        if p < 0:
+            p *= -1
+        if p == 0:
+            p = 1
+        titulo(i, f, p)
+        if i < f:
+            cont = i
+            while cont <= f:
+                print(f'{cont} ', end='', flush=True)
+                cont += p
+                sleep(.2)
+            print()
+        print()
+        if i > f:
+            cont = i
+            while cont >= f:
+                print(f'{cont} ', end='', flush=True)
+                cont -= p
+                sleep(.2)
+            print()
+        print()
+def titulo(i, f, p):
+        print('-='*20)
+        print(f'Contando de {i} até {f} de {p} em {p}.')
+        print('-='*20)
 
-        for c in range(início, fim+passo, passo):
-            print(c)
-            sleep(.8)
-
-
-print('1 - Para contar de 1 até 10 de 1 em 1')
-print('2 - Para contar de 10 até 0 de 2 em 2')
-print('3 - Para configurar uma contagem personalizada')
-
-opção = int(input('Digite a opção desejada:  '))
-
-contador()
+#Programa Principal
+contador(1, 10, 1)
+contador(10, 0, 2)
+print('Agora defina a sua contagem personalizada:  ')
+i = int(input('Digite o início:  '))
+f  = int(input('Digite o fim:    '))
+p = int(input('Digite o passo:   '))
+print()
+contador(i, f, p)
