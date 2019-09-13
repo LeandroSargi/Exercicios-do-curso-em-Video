@@ -21,8 +21,9 @@ while True:
     campeonato['Gols Feitos'] =  gols[:]
     campeonato['Total de Gols'] = sum(gols)
     time.append(campeonato.copy())
-    opção = str(input('Deseja continuar? [S / N]:  ')).strip() .upper() [0]
+
     while True:
+        opção = str(input('Deseja continuar? [S / N]:  ')).strip().upper()[0]
         if opção in 'SN':
             break
         print('ERRO!! Por favor, digite apenas S ou N.')
