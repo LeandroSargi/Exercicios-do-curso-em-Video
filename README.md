@@ -1,4 +1,4 @@
-Estou fazendo um curso de linguagem pyhton desde o começo do ano de 2019.
+Estou fazendo um curso de linguagem python desde o começo do ano de 2019.
 Me interessei bastante na linguagem e também no ramo da programação em si.
 Recentemente descobri a importância de se saber usar um versionador de código.
 Por este motivo, estarei enviando e trabalhando com meus arquivos utilizando esta
