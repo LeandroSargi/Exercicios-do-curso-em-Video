@@ -1,0 +1,5 @@
+nome = str(input('Digite o seu nome completo:\n'))
+print(nome.upper())
+print(nome.lower())
+print('O nome possui', len(''.join(nome.split())), 'dígitos sem espaçamento.')
+print('O primeiro nome possui', len((nome.split())[0]), 'dígitos.')
